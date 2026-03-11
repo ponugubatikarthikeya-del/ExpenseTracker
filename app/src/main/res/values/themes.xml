@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ExpenseTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimaryOne</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:fontFamily">@font/poppinsfont</item>
+    </style>
+
+    <style name="Theme.ExpenseTracker" parent="Base.Theme.ExpenseTracker" />
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/white</item>
+    </style>
+
+</resources>

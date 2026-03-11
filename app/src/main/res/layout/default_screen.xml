@@ -1,0 +1,63 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:context=".DefaultScreen">
+
+    <!-- Fragment container -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_home_screen"/>
+
+    <!-- Bottom Navigation (FULL WIDTH) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        app:menu="@menu/bottom_nav"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@android:color/black"
+        app:itemTextColor="@android:color/black"
+        android:clickable="true"
+        android:focusable="true"
+        app:itemRippleColor="@color/bottomNav_rippleColor"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        tools:ignore="VisualLintBottomNav"/>
+
+    <!-- CENTER + BUTTON -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnAdd"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="52dp"
+        app:cardCornerRadius="36dp"
+        app:strokeWidth="0dp"
+        app:rippleColor="@null"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/gradient_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="40sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:padding="6dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
