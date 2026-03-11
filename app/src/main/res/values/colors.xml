@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="my_light_primary">#FF6200EE</color>
+    <color name="my_dark_primary">#FFBB86FC</color>
+    <color name="my_light_secondary">#FF03DAC5</color>
+    <color name="orange">#E78C08</color>
+    <color name="light_white">#C0ECF4F3</color>
+    <color name="gradient_start">#6A5AE0</color>
+    <color name="gradient_end">#F76CCB</color>
+    <color name="text_white">#9e9696</color>
+    <color name="bottomNav_rippleColor">#BDB3B3</color>
+    <color name="textColor">#5b6069</color>
+    <color name="green">#0fd436</color>
+    <color name="red">#e61b10</color>
+    <color name="colorPrimaryOne">#F3C9FA</color>
+
+</resources>

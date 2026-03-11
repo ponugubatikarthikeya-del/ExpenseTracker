@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    <string name="add_expenses">Add Expenses</string>
+    <string name="cancel_button">cancel button in add Expenses screen</string>
+    <string name="_0">$0</string>
+    <string name="save_btn">Save</string>
+    <string name="today">Today</string>
+    <string name="note">Note</string>
+    <string name="category">Category</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
