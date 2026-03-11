@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/homeImageIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/avatar"
+            android:scaleType="centerInside"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/add_symbol_bg"/>
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/homeImageIcon"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="34dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Karthikeya"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@id/homeImageIcon"
+            android:layout_below="@id/welcomeTextView"/>
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/round_grid_view_24"
+            android:background="@drawable/expenses_bg"
+            android:elevation="2dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"/>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/homeAmountShowCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:strokeWidth="0dp"
+            android:layout_below="@id/homeImageIcon"
+            android:layout_margin="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_bg"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/TotalBalanceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="Total Balance"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TotalAmountDigitView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TotalBalanceTextView"
+                    android:layout_centerHorizontal="true"
+                    android:text="$ 4800.00 "
+                    android:textSize="42dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/upArrow"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_below="@id/TotalAmountDigitView"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/add_expenses_bg"
+                    android:backgroundTint="@color/white"
+                    android:elevation="8dp"
+                    android:src="@drawable/baseline_arrow_upward_24"
+                    app:tint="@color/green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TotalAmountDigitView"
+                    android:text="Income"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/upArrow" />
+
+
+                <TextView
+                    android:id="@+id/ExpenseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expense"
+                    android:textStyle="bold"
+                    android:layout_below="@id/TotalAmountDigitView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_below="@id/TotalAmountDigitView"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@id/ExpenseTextView"
+                    android:background="@drawable/add_expenses_bg"
+                    android:elevation="8dp"
+                    android:src="@drawable/baseline_arrow_downward_24"
+                    app:tint="@color/red" />
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <TextView
+            android:layout_below="@id/homeAmountShowCardView"
+            android:id="@+id/dailyTransactionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Transactions"
+            android:textColor="@color/textColor"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="20dp"
+            />
+
+        <TextView
+            android:id="@+id/txtEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No transactions today"
+            android:textSize="18sp"
+            android:textColor="#888888"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginTop="100dp"
+            android:layout_below="@id/dailyTransactionTextView"
+            android:layout_centerHorizontal="true"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dailyRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dailyTransactionTextView"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:nestedScrollingEnabled="false"
+            android:paddingBottom="10dp" />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

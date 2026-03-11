@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.ExpensesFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/expensesGraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="20dp"
+        app:strokeWidth="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/monthView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="March"
+                android:textColor="@color/text_white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+            <TextView
+                android:id="@+id/monthlyExpensesBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$100000.00"
+                android:textColor="@color/textColor"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/monthView"
+                app:layout_constraintEnd_toEndOf="@id/monthView"
+                app:layout_constraintTop_toBottomOf="@id/monthView" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/avatar"
+                app:layout_constraintTop_toBottomOf="@id/monthlyExpensesBalance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/expensesDateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="sat 31 march 2026"
+        android:textColor="@color/textColor"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/expensesGraph"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="@id/expensesGraph"
+        app:layout_constraintTop_toBottomOf="@id/expensesGraph" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/monthlyExpensesRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:nestedScrollingEnabled="false"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/expensesDateDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
